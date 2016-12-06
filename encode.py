@@ -8,7 +8,7 @@ def to_bit_generator(msg):
         for i in range(8):
             yield (o & (1 << i)) >> i
 
-hiddenMessage = to_bit_generator("This is the hidden message......" * 10000)
+hiddenMessage = to_bit_generator(open("README.md", "r").read() * 10)
 
 def main():
     # Read the original image
