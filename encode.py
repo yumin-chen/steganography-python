@@ -11,15 +11,15 @@ def to_bit_generator(msg):
 def main():
     # Create a generator for the hidden message
     hidden_message = to_bit_generator(open("README.md", "r").read() * 10)
-    
+
     # Read the original image
-    img = cv2.imread('img.jpg', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('original.png', cv2.IMREAD_GRAYSCALE)
     for h in range(len(img)):
         for w in range(len(img[0])):
             # Write the hidden message into the least significant bit
             img[h][w] = (img[h][w] & ~1) | next(hidden_message)
     # Write out the image with hidden message
-    cv2.imwrite("img_grayscale.bmp", img)
+    cv2.imwrite("output.png", img)
 
 if __name__ == "__main__":
 	main()
