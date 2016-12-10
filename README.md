@@ -6,6 +6,8 @@ Introduction
 ------------------------
 This repository is the source code for my blog post tutorial [How To Hide a Secret Message in an Image File – Steganography in Python](http://chenyumin.com/p/how-to-hide-a-secret-message-in-an-image-file-steganography-in-python).  
 
+![Steganography](steganography.jpg)  
+
 Steganography is a way of hiding critical information. Unlike cryptography, which focuses on encrypting data, steganography focuses on concealing the data, and thus the intended secret message does not attract attention to itself as an object of scrutiny.  
 This project is a simple example of concealing a hidden messages in an image file. 
 
